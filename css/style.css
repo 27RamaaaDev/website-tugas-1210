@@ -1,0 +1,600 @@
+/********** Template CSS **********/
+:root {
+    --primary: #0F4C81; /* Biru ITB */
+    --secondary: #F8C300; /* Emas */
+    --light: #F2F2F2;
+    --dark: #111111;
+}
+
+/* Override Bootstrap Text Primary Color (Agar tidak Merah) */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+/* Override Bootstrap Button Primary (Agar tidak Merah) */
+.btn-primary {
+    color: #FFFFFF;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: #0b3d6b !important;
+    border-color: #0b3d6b !important;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header-inner {
+    background: rgba(0, 0, 0, .7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Facts ***/
+.fact {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-bg-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*** Service ***/
+.service .nav .nav-link {
+    background: var(--light);
+    transition: .5s;
+}
+
+.service .nav .nav-link.active {
+    background: var(--primary);
+}
+
+.service .nav .nav-link.active h4 {
+    color: #FFFFFF !important;
+}
+
+
+/*** Booking ***/
+.booking {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-bg-2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+
+/*** Team ***/
+.team-item .team-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    transform: scale(0);
+    transition: .5s;
+}
+
+.team-item:hover .team-overlay {
+    transform: scale(1);
+}
+
+.team-item .team-overlay .btn {
+    color: var(--primary);
+    background: #FFFFFF;
+}
+
+.team-item .team-overlay .btn:hover {
+    color: #FFFFFF;
+    background: var(--secondary)
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/*** Footer ***/
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/carousel-bg-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+.footer .btn.btn-social:hover i {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+/* --- Tambahan Style Baru untuk Anggota Tim & Footer Link --- */
+.team-item {
+    transition: .3s;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: #ffffff !important;
+}
+.team-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+.team-img-box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #F2F2F2;
+}
+.team-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: .3s;
+}
+.footer-link:hover {
+    color: var(--secondary); /* Warna Emas saat hover */
+    padding-left: 5px;
+}
+
+/* --- MUSIC PLAYER "DYNAMIC ISLAND" STYLE --- */
+.music-player-bar {
+    position: fixed;
+    bottom: 25px; /* Melayang dari bawah */
+    left: 50%;
+    transform: translateX(-50%); /* Posisi tepat di tengah */
+    width: auto;
+    min-width: 400px;
+    max-width: 90%;
+    height: 70px;
+    background-color: #000000; /* Hitam pekat khas Dynamic Island */
+    border-radius: 50px; /* Bentuk kapsul/pill */
+    z-index: 1000000; /* Z-INDEX SANGAT TINGGI */
+    color: white;
+    padding: 0 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4); /* Efek bayangan melayang */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    pointer-events: auto; /* Pastikan bisa diklik */
+}
+
+.music-player-bar:hover {
+    transform: translateX(-50%) scale(1.02); /* Sedikit membesar saat di-hover */
+}
+
+/* Container dalam player (Flexbox untuk tata letak rapi) */
+.player-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.player-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.player-album-art {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Album art bulat */
+    overflow: hidden;
+    margin-right: 15px;
+    border: 2px solid #333;
+    animation: spin 10s linear infinite; /* Animasi putar piringan hitam */
+    animation-play-state: paused;
+}
+
+/* Animasi berputar saat lagu main (diatur via JS class nanti, atau biarkan statis) */
+.player-album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-track-info h6 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+.player-track-info small {
+    font-size: 0.75rem;
+    color: #b3b3b3;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    z-index: 1000001; /* Kontrol di atas segalanya */
+}
+
+.btn-control {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+.btn-control:hover {
+    color: white;
+}
+
+.btn-play {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white; /* Tombol Play Putih Kontras */
+    border: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+    pointer-events: auto;
+}
+.btn-play:hover {
+    transform: scale(1.1);
+    background-color: #ddd;
+}
+.btn-play:active {
+    transform: scale(0.95);
+}
+
+.player-progress {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.progress-bar-bg {
+    width: 100px; /* Progress bar lebih pendek agar muat di kapsul */
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background-color: var(--secondary); /* Pakai warna Emas atau Biru */
+}
+
+.time-text {
+    font-size: 0.7rem;
+    color: #888;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 576px) {
+    .music-player-bar {
+        min-width: 90%;
+        bottom: 20px;
+        padding: 0 15px;
+    }
+    .player-track-info small {
+        display: none; /* Sembunyikan nama artis di HP jika sempit */
+    }
+    .progress-bar-bg {
+        width: 60px;
+    }
+}
