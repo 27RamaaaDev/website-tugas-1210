@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Saya - Profesional & Responsif</title>
+	    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Variabel Warna & Font */
+        :root {
+            --primary: #2d3436;
+            --secondary: #0984e3;
+            --text: #636e72;
+            --bg: #f5f6fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--bg); color: var(--primary); line-height: 1.6; padding: 20px; }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Sidebar - Profil & Kontak */
+        .sidebar {
+            flex: 1 1 300px;
+            background: red;
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            background: yellow;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid var(--secondary);
+        }
+
+        .sidebar h2 { margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .sidebar p { font-size: 0.9rem; opacity: 0.8; margin-bottom: 20px; }
+
+        .contact-info { margin-top: 30px; }
+        .contact-info h3 { border-bottom: 1px solid #636e72; margin-bottom: 10px; padding-bottom: 5px; font-size: 1.1rem; }
+        .contact-info ul { list-style: none; }
+        .contact-info li { margin-bottom: 10px; font-size: 0.9rem; }
+
+        /* Main Content - Pengalaman & Pendidikan */
+        .main-content {
+            flex: 2 1 500px;
+            padding: 40px;
+        }
+
+        .section { margin-bottom: 30px; }
+        .section h2 { 
+            color: var(--secondary); 
+            border-left: 5px solid var(--secondary); 
+            padding-left: 15px; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .item { margin-bottom: 20px; }
+        .item h4 { font-size: 1.1rem; color: #2d3436; }
+        .item span { font-size: 0.85rem; color: var(--secondary); font-weight: bold; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #e1f5fe;
+            color: var(--secondary);
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* Responsif untuk Mobile */
+        @media (max-width: 600px) {
+            .container { flex-direction: column; }
+            .sidebar { text-align: center; }
+        }
+		.foto-lingkaran {
+    width: 150px; /* Atur lebar */
+    height: 150px; /* Atur tinggi (harus sama dengan lebar) */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak gepeng */
+  }
+    </style>
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Jalan Maju Mundur</small>
+                </div>
+				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-clock-alt text-primary me-2"></small>
+                    <small>Telp : 021</small>
+					
+					
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-clock text-primary me-2"></small>
+                    <small>
+					<span id="tanggalwaktu"></span>
+					<script>
+					var dt = new Date();
+					document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
+					</script>
+					</small>		
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <marquee><h2 class="m-0 text-primary"></i>CV NURSIN IRHAM</h2></marquee>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Beranda</a>
+				<a href="form.html" class="nav-item nav-link ">Form Pendaftaran</a>
+				<a href="data.html" class="nav-item nav-link ">Data Pendaftar</a>
+            </li>	
+            </div>
+			
+			<div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" 
+			data-bs-toggle="dropdown">CV</a>
+            <div class="dropdown-menu m-0">
+            <a href="dina.html" class="dropdown-item">Dina</a>
+			<a href="male.html" class="dropdown-item">Male</a>
+			<a href="muti.html" class="dropdown-item">Muti</a>
+			<a href="faadhil.html" class="dropdown-item">Faadhil</a>
+			<a href="denis.html" class="dropdown-item">Denis</a>
+			<a href="rama.html" class="dropdown-item">Rama</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+		<center><img src="images/sman4.jpg" alt="Foto Profil" class="foto-lingkaran"></center>
+             <h2>Nama Anda</h2>
+            <p>Web Developer & Designer</p>
+            
+            <div class="contact-info">
+                <h3>Kontak</h3>
+                <ul>
+                    <li>📧 email@gmail.com</li>
+                    <li>📞 +62 8...</li>
+                    <li>📍 Jakarta, Indonesia</li>
+                    <li>🌐 www.....</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>Keahlian</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">HTML5</div>
+                    <div class="skill-tag">CSS3</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">Membuat Ketawa</div>
+					<div class="skill-tag">Memasak</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <h2>Profil Saya</h2>
+                <p>Saya adalah seorang...........</p>
+            </section>
+
+            <section class="section">
+                <h2>Pengalaman Kerja</h2>
+                <div class="item">
+                    <h4>Pengalaman 1</h4>
+                    <span>2021 - Sekarang</span>
+                    <p>Memimpin tim frontend dalam membangun platform e-commerce skala besar menggunakan React dan Tailwind CSS.</p>
+                </div>
+                <div class="item">
+                    <h4>Pengalaman 2</h4>
+                    <span>2019 - 2021</span>
+                    <p>Bertanggung jawab dalam pembuatan aset visual dan slicing UI/UX menjadi kode HTML/CSS yang presisi.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Pendidikan</h2>
+                <div class="item">
+                    <h4>SD</h4>
+                    <span>2015 - 2019</span>
+                    <p>SD...</p>
+                </div>
+                <div class="item">
+                    <h4>SMP</h4>
+                    <span>2015 - 2019</span>
+                    <p>SMP ....Lulus dengan nilai rata-rata..</p>
+                </div>
+                <div class="item">
+                    <h4>SMA</h4>
+                    <span>2015 - 2019</span>
+                    <p>SMA....Lulus dengan nilai rata-rata..</p>
+                </div>
+                <div class="item">
+                    <h4>S1</h4>
+                    <span>2015 - 2019</span>
+                    <p>Universitas........Lulus dengan nilai IPK ..</p>
+                </div>				
+            </section>
+        </main>
+    </div>
+	<p>
+    
+        <div class="container">
+            <div class="copyright">
+                
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+					
+                        &copy; <a class="border-bottom" href="#" align="center">Nama Masing-Masing</a>, All Right Reserved.
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
