@@ -1,3 +1,6 @@
+<?php
+include 'koneksi.php'; // Menyertakan file koneksi [3]
+?>
 <!DOCTYPE html>
 <html lang="id">
 
