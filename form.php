@@ -102,108 +102,149 @@
     <!-- Navbar End -->
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+<div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-5">FORMULIR PENDAFTARAN</h1>
             </div>
-            <center>
-<form action="proses.php" method="POST">
-<table>
-<tr>
-<td>Nama Lengkap</td>
-<td>:</td>
-<td><input type="text" name="nama_lengkap"></td>
-</tr>
-<tr>
-<td>NISN</td>
-<td>:</td>
-<td><input type="text" name="nisn"></td>
-</tr>
-<tr>
-<td>Asal Sekolah</td>
-<td>:</td>
-<td><input type="text" name="asal_sekolah"></td>
-</tr>
-<tr>
-<td>Tempat Lahir</td>
-<td>:</td>
-<td><input type="text" name="tempat_lahir"></td>
-</tr>
-<tr>
-<td>Tanggal lahir</td>
-<td>:</td>
-<td><input type="date" name="tanggal_lahir"></td>
-</tr>
-<tr>
-<td>Alamat</td>
-<td>:</td>
-<td><input cols="22" rows="3" name="alamat"></td>
-</tr>
-<tr>
-<td>Kota</td>
-<td>:</td>
-<td><select name="kota">
-<option value="Bekasi">Bekasi</option>
-<option value="Jakarta">Jakarta</option>
-<option value="Bogor">Bogor</option>
-<option value="Depok">Depok</option>
-</select></td>
-</tr>
-<tr>
-<td>Jenis Kelamin</td>  
-<td>:</td>
-<td><select name="jk">
-<option value="Bekasi">L</option>
-<option value="Jakarta">P</option>
-</select></td>
-</tr> 
-<tr>
-<td>Email</td>
-<td>:</td>
-<td><input type="email" name="email"></td>
-</tr>
-<tr>
-<td>No.HP</td>
-<td>:</td>
-<td><input type="text" name="no_hp"></td>
-</tr>
-<tr>
-<td>Nilai S1</td>
-<td>:</td>
-<td><input type="text" name="nilai_s1"></td>
-</tr>
-<tr>
-<td>Nilai S2</td>
-<td>:</td>
-<td><input type="text" name="nilai_s2"></td>
-</tr>
-<tr>
-<td>Nilai S3</td>
-<td>:</td>
-<td><input type="text" name="nilai_s3"></td>
-</tr>
-<tr>
-<td>Nilai S4</td>
-<td>:</td>
-<td><input type="text" name="nilai_s4"></td>
-</tr>
-<tr>
-<td>Nilai S5</td>
-<td>:</td>
-<td><input type="text" name="nilai_s5"></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="submit" value="Daftar"/>
-<input type="reset" name="reset" value="Reset"/>
-</td>
-</tr>
-</table>
-</form>
-</center>
 
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg border-0 rounded-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card-body p-5">
+                            <form action="proses.php" method="POST">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <h5 class="text-primary border-bottom pb-2">Informasi Pribadi</h5>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                                            <label for="nama_lengkap">Nama Lengkap</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="nisn" name="nisn" placeholder="NISN" required>
+                                            <label for="nisn">NISN</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir">
+                                            <label for="tempat_lahir">Tempat Lahir</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir">
+                                            <label for="tanggal_lahir">Tanggal Lahir</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="jk" name="jk">
+                                                <option selected disabled>Pilih Jenis Kelamin</option>
+                                                <option value="L">Laki-laki</option>
+                                                <option value="P">Perempuan</option>
+                                            </select>
+                                            <label for="jk">Jenis Kelamin</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No. HP">
+                                            <label for="no_hp">No. HP / WhatsApp</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mt-4">
+                                        <h5 class="text-primary border-bottom pb-2">Alamat & Asal Sekolah</h5>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Anda">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="Asal Sekolah">
+                                            <label for="asal_sekolah">Asal Sekolah</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="kota" name="kota">
+                                                <option selected disabled>Pilih Kota</option>
+                                                <option value="Bekasi">Bekasi</option>
+                                                <option value="Jakarta">Jakarta</option>
+                                                <option value="Bogor">Bogor</option>
+                                                <option value="Depok">Depok</option>
+                                                <option value="Bandung">Bandung</option>
+                                            </select>
+                                            <label for="kota">Kota Domisili</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Alamat Lengkap" id="alamat" name="alamat" style="height: 100px"></textarea>
+                                            <label for="alamat">Alamat Lengkap</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mt-4">
+                                        <h5 class="text-primary border-bottom pb-2">Data Nilai Rapor</h5>
+                                        <p class="text-muted small">Masukkan nilai rata-rata per semester.</p>
+                                    </div>
+
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="nilai_s1" name="nilai_s1" placeholder="Smt 1">
+                                            <label for="nilai_s1">Smt 1</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="nilai_s2" name="nilai_s2" placeholder="Smt 2">
+                                            <label for="nilai_s2">Smt 2</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="nilai_s3" name="nilai_s3" placeholder="Smt 3">
+                                            <label for="nilai_s3">Smt 3</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="nilai_s4" name="nilai_s4" placeholder="Smt 4">
+                                            <label for="nilai_s4">Smt 4</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="nilai_s5" name="nilai_s5" placeholder="Smt 5">
+                                            <label for="nilai_s5">Smt 5</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mt-4 text-center">
+                                        <button class="btn btn-primary py-3 px-5 w-100 mb-3" type="submit" name="submit">Daftar Sekarang</button>
+                                        <button class="btn btn-secondary py-2 px-4" type="reset" name="reset">Reset Formulir</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Team End -->
