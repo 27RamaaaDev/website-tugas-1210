@@ -70,7 +70,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
             <div style="overflow: hidden; white-space: nowrap; width: 350px;">
                  <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
@@ -82,18 +82,18 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <!-- Menambahkan pe-lg-5 untuk menggeser menu sedikit ke kiri -->
             <div class="navbar-nav ms-auto p-4 p-lg-0 pe-lg-5">
-                <a href="index.html" class="nav-item nav-link">Beranda</a>
-                <a href="form.html" class="nav-item nav-link active">Form Pendaftaran</a>
-                <a href="data.html" class="nav-item nav-link">Data Pendaftar</a>
+                <a href="index.php" class="nav-item nav-link">Beranda</a>
+                <a href="form.php" class="nav-item nav-link active">Form Pendaftaran</a>
+                <a href="data.php" class="nav-item nav-link">Data Pendaftar</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">CV</a>
                     <div class="dropdown-menu m-0">
-                        <a href="dina.html" class="dropdown-item">Dina</a>
-                        <a href="male.html" class="dropdown-item">Male</a>
-                        <a href="muti.html" class="dropdown-item">Muti</a>
-                        <a href="faadhil.html" class="dropdown-item">Faadhil</a>
-                        <a href="denis.html" class="dropdown-item">Denis</a>
-                        <a href="rama.html" class="dropdown-item">Rama</a>
+                        <a href="dina.php" class="dropdown-item">Dina</a>
+                        <a href="male.php" class="dropdown-item">Male</a>
+                        <a href="muti.php" class="dropdown-item">Muti</a>
+                        <a href="faadhil.php" class="dropdown-item">Faadhil</a>
+                        <a href="denis.php" class="dropdown-item">Denis</a>
+                        <a href="rama.php" class="dropdown-item">Rama</a>
                     </div>
                 </div>
             </div>
@@ -107,6 +107,103 @@
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-5">FORMULIR PENDAFTARAN</h1>
             </div>
+            <center>
+<form action="proses.php" method="POST">
+<table>
+<tr>
+<td>Nama Lengkap</td>
+<td>:</td>
+<td><input type="text" name="nama_lengkap"></td>
+</tr>
+<tr>
+<td>NISN</td>
+<td>:</td>
+<td><input type="text" name="nisn"></td>
+</tr>
+<tr>
+<td>Asal Sekolah</td>
+<td>:</td>
+<td><input type="text" name="asal_sekolah"></td>
+</tr>
+<tr>
+<td>Tempat Lahir</td>
+<td>:</td>
+<td><input type="text" name="tempat_lahir"></td>
+</tr>
+<tr>
+<td>Tanggal lahir</td>
+<td>:</td>
+<td><input type="date" name="tanggal_lahir"></td>
+</tr>
+<tr>
+<td>Alamat</td>
+<td>:</td>
+<td><input cols="22" rows="3" name="alamat"></td>
+</tr>
+<tr>
+<td>Kota</td>
+<td>:</td>
+<td><select name="kota">
+<option value="Bekasi">Bekasi</option>
+<option value="Jakarta">Jakarta</option>
+<option value="Bogor">Bogor</option>
+<option value="Depok">Depok</option>
+</select></td>
+</tr>
+<tr>
+<td>Jenis Kelamin</td>  
+<td>:</td>
+<td><select name="jk">
+<option value="Bekasi">L</option>
+<option value="Jakarta">P</option>
+</select></td>
+</tr> 
+<tr>
+<td>Email</td>
+<td>:</td>
+<td><input type="email" name="email"></td>
+</tr>
+<tr>
+<td>No.HP</td>
+<td>:</td>
+<td><input type="text" name="no_hp"></td>
+</tr>
+<tr>
+<td>Nilai S1</td>
+<td>:</td>
+<td><input type="text" name="nilai_s1"></td>
+</tr>
+<tr>
+<td>Nilai S2</td>
+<td>:</td>
+<td><input type="text" name="nilai_s2"></td>
+</tr>
+<tr>
+<td>Nilai S3</td>
+<td>:</td>
+<td><input type="text" name="nilai_s3"></td>
+</tr>
+<tr>
+<td>Nilai S4</td>
+<td>:</td>
+<td><input type="text" name="nilai_s4"></td>
+</tr>
+<tr>
+<td>Nilai S5</td>
+<td>:</td>
+<td><input type="text" name="nilai_s5"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="submit" value="Daftar"/>
+<input type="reset" name="reset" value="Reset"/>
+</td>
+</tr>
+</table>
+</form>
+</center>
+
         </div>
     </div>
     <!-- Team End -->
@@ -129,9 +226,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Menu Cepat</h4>
-                    <a class="footer-link" href="index.html">Beranda</a>
-                    <a class="footer-link" href="cv.html">CV Portofolio</a>
-                    <a class="footer-link" href="tentang.html">Tentang Kami</a>
+                    <a class="footer-link" href="index.php">Beranda</a>
+                    <a class="footer-link" href="cv.php">CV Portofolio</a>
+                    <a class="footer-link" href="tentang.php">Tentang Kami</a>
                     <a class="footer-link" href="https://wa.me/qr/4JIAIX4FXTSDC1">Kontak</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -159,43 +256,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- MUSIC PLAYER DYNAMIC ISLAND -->
-    <div class="music-player-bar">
-        <div class="player-inner">
-            <!-- Left: Info -->
-            <div class="player-left">
-                <div class="player-album-art">
-                    <img src="images/travisscott.jpeg" alt="Album Art">
-                </div>
-                <div class="player-track-info">
-                    <h6>MELTDOWN (ft. Drake)</h6>
-                    <small>Travis Scott, Drake</small>
-                </div>
-            </div>
-
-            <!-- Center: Controls -->
-            <div class="player-controls">
-                <button class="btn-control"><i class="fa fa-step-backward"></i></button>
-                <!-- Tombol Play menggunakan onclick="toggleMusic()" -->
-                <button class="btn-play" id="btnPlay" type="button" onclick="toggleMusic()">
-                    <i class="fa fa-play" id="playIcon"></i>
-                </button>
-                <button class="btn-control"><i class="fa fa-step-forward"></i></button>
-            </div>
-
-            <!-- Right: Progress -->
-            <div class="player-progress">
-                <span id="currentTime" class="time-text">0:00</span>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" id="progressBar"></div>
-                </div>
-                <span id="duration" class="time-text">4:07</span>
-            </div>
-        </div>
-        
-        <!-- Audio Tag dengan Error Handler -->
-        <audio id="audioPlayer" src="meltdown.mp3" preload="auto" onerror="alert('File musik.mp3 TIDAK DITEMUKAN atau rusak.\n\nPastikan nama file: musik.mp3 (huruf kecil semua)')"></audio>
     </div>
     <!-- Footer End -->
 

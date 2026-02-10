@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CV - Restu Putra R.</title>
+    <title>CV - FaadhiL Hermin WICAKSONO</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -266,7 +266,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
             <div style="overflow: hidden; white-space: nowrap; width: 100%; max-width: 350px;">
                  <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
@@ -277,18 +277,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0 pe-lg-5">
-                <a href="index.html" class="nav-item nav-link">Beranda</a>
-                <a href="form.html" class="nav-item nav-link">Form Pendaftaran</a>
-                <a href="data.html" class="nav-item nav-link">Data Pendaftar</a>
+                <a href="index.php" class="nav-item nav-link">Beranda</a>
+                <a href="form.php" class="nav-item nav-link">Form Pendaftaran</a>
+                <a href="data.php" class="nav-item nav-link">Data Pendaftar</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">CV</a>
                     <div class="dropdown-menu m-0">
-                        <a href="dina.html" class="dropdown-item">Dina</a>
-                        <a href="male.html" class="dropdown-item">Male</a>
-                        <a href="muti.html" class="dropdown-item">Muti</a>
-                        <a href="faadhil.html" class="dropdown-item">Faadhil</a>
-                        <a href="denis.html" class="dropdown-item">Denis</a>
-                        <a href="rama.html" class="dropdown-item active">Rama</a>
+                        <a href="dina.php" class="dropdown-item">Dina</a>
+                        <a href="male.php" class="dropdown-item">Male</a>
+                        <a href="muti.php" class="dropdown-item">Muti</a>
+                        <a href="faadhil.php" class="dropdown-item active">Faadhil</a>
+                        <a href="denis.php" class="dropdown-item">Denis</a>
+                        <a href="rama.php" class="dropdown-item">Rama</a>
                     </div>
                 </div>
             </div>
@@ -311,16 +311,16 @@
                         <div class="card-body text-center">
                             <div class="profile-img-container mb-3 wow zoomIn" data-wow-delay="0.2s">
                                 <!-- Pastikan gambar rama.jpeg ada -->
-                                <img src="images/rama.jpg" alt="Foto Profil Rama">
+                                <img src="images/faadhil.jpeg" alt="Foto Profil Rama">
                             </div>
-                            <h3 class="fw-bold mb-1">Restu Putra Ramadhan</h3>
-                            <p class="text-primary fw-bold mb-3">Fullstack Developer & Software Engineer</p>
+                            <h3 class="fw-bold mb-1">Faadhil Hermin Wicaksono</h3>
+                            <p class="text-primary fw-bold mb-3">Gubernur Jawa Barat</p>
                             
                             <div class="d-flex justify-content-center gap-2 mb-2">
-                                <span class="badge bg-light text-dark border"><i class="fa fa-id-card me-1"></i> NIS: 232410134</span>
+                                <span class="badge bg-light text-dark border"><i class="fa fa-id-card me-1"></i> NIS: 232410013</span>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <span class="badge bg-light text-dark border"><i class="fa fa-university me-1"></i> STEI - K ITB</span>
+                                <span class="badge bg-light text-dark border"><i class="fa fa-university me-1"></i> Ekonomi pembangunan - UGM</span>
                             </div>
                         </div>
                     </div>
@@ -334,23 +334,23 @@
                             <ul class="list-unstyled contact-list">
                                 <li>
                                     <i class="fa fa-envelope"></i>
-                                    <span class="text-break">restuputraramadhannn@gmail.com</span>
+                                    <span class="text-break">fadilherminwicaksono@gmail.com</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-phone"></i>
-                                    <span>+62 851-1722-7098</span>
+                                    <span>+62 857-1349-6955</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-map-marker-alt"></i>
-                                    <span>Bandung, 27 September 2008</span>
+                                    <span>Bekasi, 10 November 2007</span>
                                 </li>
                                 <li>
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>linkedin.com/in/restu-putra-ramadhan-6446b9358</span>
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@faadhwill</span>
                                 </li>
                                 <li>
-                                    <i class="fab fa-github"></i>
-                                    <span>github.com/27RamaaaDev</span>
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>@kemalpppp</span>
                                 </li>
                             </ul>
                         </div>
@@ -363,15 +363,10 @@
                         <div class="card-body">
                             <h4 class="cv-section-title">Keahlian</h4>
                             <div class="d-flex flex-wrap">
-                                <span class="skill-badge">HTML5</span>
-                                <span class="skill-badge">CSS3</span>
-                                <span class="skill-badge">JavaScript</span>
-                                <span class="skill-badge">PHP</span>
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">C++</span>
-                                <span class="skill-badge">MySQL</span>
-                                <span class="skill-badge">Git</span>
-                                <span class="skill-badge">Laravel</span>
+                                <span class="skill-badge">Bernyanyi</span>
+                                <span class="skill-badge">Alat musik</span>
+                                <span class="skill-badge">office</span>
+                                <span class="skill-badge">Canva</span>
                             </div>
                         </div>
                     </div>
@@ -418,7 +413,8 @@
                     <div class="card-body p-4">
                         <h3 class="cv-section-title">Tentang Saya</h3>
                         <p class="text-secondary" style="text-align: justify;">
-                            Saya adalah seorang pengembang web yang berdedikasi dengan fokus kuat pada pengembangan Backend. Memiliki semangat tinggi dalam mempelajari teknologi baru dan memecahkan masalah kompleks melalui kode. Saat ini sedang menempuh pendidikan di Institut Teknologi Bandung dan aktif dalam berbagai proyek pengembangan perangkat lunak kampus. Saya berkomitmen untuk menciptakan solusi digital yang efisien dan skalabel.
+                            Saya adalah seorang pelajar yang memiliki semangat belajar dan rasa ingin tahu yang tinggi. Saya tertarik pada berbagai bidang pengetahuan dan selalu berusaha mengembangkan kemampuan diri, baik di bidang akademik maupun nonakademik. Saya percaya bahwa disiplin, kerja keras, dan konsistensi adalah kunci untuk meraih masa depan yang lebih baik.
+Selain belajar, saya juga senang mengisi waktu luang dengan kegiatan yang bermanfaat, seperti mengerjakan tugas, berdiskusi, dan mengembangkan minat pribadi. Saya bercita-cita menjadi pribadi yang berguna bagi diri sendiri, keluarga, dan masyarakat
                         </p>
                     </div>
                 </div>
@@ -431,17 +427,17 @@
                         <!-- Item 1: SD -->
                         <div class="timeline-item">
                             <span class="timeline-date">2014 - 2020</span>
-                            <h5 class="fw-bold">SDN Kotabaru IX</h5>
+                            <h5 class="fw-bold">SDN Kaliabang Tengah 8</h5>
                             <p class="text-primary mb-1">6 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 88,2.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 90,6.</p>
                         </div>
 
                         <!-- Item 2: SMP -->
                         <div class="timeline-item">
                             <span class="timeline-date">2020 - 2023</span>
-                            <h5 class="fw-bold">SMPN 13 Bekasi</h5>
+                            <h5 class="fw-bold">SMPN 37 KOTA BEKASI </h5>
                             <p class="text-primary mb-1">3 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 97,2. Aktif di ekstrakurikuler PMR.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 91. Aktif di ekstrakurikuler PASKIB.</p>
                         </div>
                 
                         <!-- Item 3: SMA -->
@@ -449,15 +445,15 @@
                             <span class="timeline-date">2023 - 2026</span>
                             <h5 class="fw-bold">SMAN 4 Bekasi</h5>
                             <p class="text-primary mb-1">3 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 89,8. Aktif di ekstrakurikuler SCI-TOS.</p>
+                            <p class="text-muted small">Lulus dengan nilai BAIK. Aktif di ekstrakurikuler SANGGAR KETUPAT.</p>
                         </div>
 
                         <!-- Item 4: Kuliah -->
                         <div class="timeline-item">
                             <span class="timeline-date">2026 - 2030</span>
-                            <h5 class="fw-bold">Institut Teknologi Bandung</h5>
+                            <h5 class="fw-bold">Universitas NEGERI SEMARANG</h5>
                             <p class="text-primary mb-1">3,5 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata IPK 3,8.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata IPK 4,00.CUMLAUDE</p>
                         </div>
 
                     </div>
@@ -470,16 +466,16 @@
                         
                         <div class="timeline-item">
                             <span class="timeline-date">2024 - 2025</span>
-                            <h5 class="fw-bold">Koordinator Divisi Programming & Jaringan SCI-TOS</h5>
-                            <p class="text-primary mb-1">Science Technology of 4 Senior Highschool (SCI-TOS)</p>
-                            <p class="text-muted small">Bertanggung jawab memberi ilmu, memberi arahan, dan memberi tugas kepada anggota divisi Programming Jaringan.</p>
+                            <h5 class="fw-bold">Ketua pelaksana birthday party Sanggar ketupat</h5>
+                            <p class="text-primary mb-1"></p>
+                            <p class="text-muted small">Meng kordinator agar acara yang dijalankan berjalan dengan lancar.</p>
                         </div>
 
                         <div class="timeline-item">
                             <span class="timeline-date">2026 - 2029</span>
-                            <h5 class="fw-bold">Software Engineer</h5>
-                            <p class="text-primary mb-1">PT. Nirwana Sukses Sejahtera</p>
-                            <p class="text-muted small">Mengelola website bisnis dan memastikan sistem registrasi berjalan lancar tanpa kendala teknis.</p>
+                            <h5 class="fw-bold">VOKALIS ASTAMEVA</h5>
+                            <p class="text-primary mb-1"></p>
+                            <p class="text-muted small">MeMERIAHKAN ACARA SUPAYA MERIAH.</p>
                         </div>
                     </div>
                 </div>
@@ -506,9 +502,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Menu Cepat</h4>
-                    <a class="footer-link" href="index.html">Beranda</a>
-                    <a class="footer-link" href="cv.html">CV Portofolio</a>
-                    <a class="footer-link" href="tentang.html">Tentang Kami</a>
+                    <a class="footer-link" href="index.php">Beranda</a>
+                    <a class="footer-link" href="cv.php">CV Portofolio</a>
+                    <a class="footer-link" href="tentang.php">Tentang Kami</a>
                     <a class="footer-link" href="https://wa.me/qr/4JIAIX4FXTSDC1">Kontak</a>
                 </div>
                 <div class="col-lg-4 col-md-6">

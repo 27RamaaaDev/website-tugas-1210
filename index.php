@@ -70,7 +70,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
             <div style="overflow: hidden; white-space: nowrap; width: 350px;">
                  <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
@@ -80,19 +80,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- Menambahkan pe-lg-5 untuk menggeser menu sedikit ke kiri -->
             <div class="navbar-nav ms-auto p-4 p-lg-0 pe-lg-5">
-                <a href="index.html" class="nav-item nav-link">Beranda</a>
-                <a href="form.html" class="nav-item nav-link">Form Pendaftaran</a>
-                <a href="data.html" class="nav-item nav-link active">Data Pendaftar</a>
+                <a href="index.php" class="nav-item nav-link active">Beranda</a>
+                <a href="form.php" class="nav-item nav-link">Form Pendaftaran</a>
+                <a href="data.php" class="nav-item nav-link">Data Pendaftar</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">CV</a>
                     <div class="dropdown-menu m-0">
-                        <a href="dina.html" class="dropdown-item">Dina</a>
-                        <a href="male.html" class="dropdown-item">Male</a>
-                        <a href="muti.html" class="dropdown-item">Muti</a>
-                        <a href="faadhil.html" class="dropdown-item">Faadhil</a>
-                        <a href="denis.html" class="dropdown-item">Denis</a>
-                        <a href="rama.html" class="dropdown-item">Rama</a>
+                        <a href="dina.php" class="dropdown-item">Dina</a>
+                        <a href="male.php" class="dropdown-item">Male</a>
+                        <a href="muti.php" class="dropdown-item">Muti</a>
+                        <a href="faadhil.php" class="dropdown-item">Faadhil</a>
+                        <a href="denis.php" class="dropdown-item">Denis</a>
+                        <a href="rama.php" class="dropdown-item">Rama</a>
                     </div>
                 </div>
             </div>
@@ -100,16 +101,118 @@
     </nav>
     <!-- Navbar End -->
 
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- Background Image -->
+                    <img class="w-100" src="images/itb1.jpeg" alt="Image" style="height: 700px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                                <!-- Kolom Teks -->
+                                <div class="col-10 col-lg-7 text-center text-lg-start">
+                                    <h6 class="text-white text-uppercase mb-3 animated slideInDown">SELAMAT DATANG DI</h6>
+                                    <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">INSTITUT TEKNOLOGI BANDUNG</h1>
+                                </div>
+                                <!-- Kolom Gambar Kampus (Overlay) -->
+                                <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                    <img class="img-fluid" src="images/itb2.jpeg" alt="" style="border: 5px solid white; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
     <!-- Team Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-5">DATA PENDAFTAR</h1>
+                <h6 class="text-primary text-uppercase">Tim Kami</h6>
+                <h1 class="mb-5">ANGGOTA KELOMPOK</h1>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Anggota 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light p-4 text-center">
+                        <div class="team-img-box mb-3">
+                            <img src="images/dina.jpeg" alt="">                         
+                        </div>
+                        <h5 class="fw-bold mb-0">Alvrida Dien Amalia</h5>
+                        <small class="text-primary d-block mb-2">NIS : 232410256</small>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/alvridamalia" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>  
+                
+                <!-- Anggota 2 -->        
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light p-4 text-center">
+                        <div class="team-img-box mb-3">
+                            <img src="images/male.jpeg" alt="">                         
+                        </div>
+                        <h5 class="fw-bold mb-0">Andi Maleeka E. Z.</h5>
+                        <small class="text-primary d-block mb-2">NIS : 232410004</small>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/zavmezh" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>  
+                
+                <!-- Anggota 3 -->        
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light p-4 text-center">
+                        <div class="team-img-box mb-3">
+                            <img src="images/muti.jpeg" alt="">                         
+                        </div>
+                        <h5 class="fw-bold mb-0">Muthia Al-Jatsiyah H.</h5>
+                        <small class="text-primary d-block mb-2">NIS : 232410022</small>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/muthieealh" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>  
+                
+                <!-- Anggota 4 -->        
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light p-4 text-center">
+                        <div class="team-img-box mb-3">
+                            <img src="images/faadhil.jpeg" alt="">                         
+                        </div>
+                        <h5 class="fw-bold mb-0">Faadhil Hermin W.</h5>
+                        <small class="text-primary d-block mb-2">NIS : 232410013</small>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/faadhwill" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>  
+                
+                <!-- Anggota 5 -->        
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light p-4 text-center">
+                        <div class="team-img-box mb-3">
+                            <img src="images/denis.jpeg" alt="">                         
+                        </div>
+                        <h5 class="fw-bold mb-0">M. Denis Saputra</h5>
+                        <small class="text-primary d-block mb-2">NIS : 232410125</small>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/dnssptraaa_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>  
+                
+                <!-- Anggota 6 -->        
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light p-4 text-center">
+                        <div class="team-img-box mb-3">
+                            <img src="images/rama.jpg" alt="">                         
+                        </div>
+                        <h5 class="fw-bold mb-0">Restu Putra R.</h5>
+                        <small class="text-primary d-block mb-2">NIS : 232410134</small>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://www.instagram.com/backend.ramaa" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>              
             </div>
         </div>
     </div>
     <!-- Team End -->
-            
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -128,9 +231,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Menu Cepat</h4>
-                    <a class="footer-link" href="index.html">Beranda</a>
-                    <a class="footer-link" href="cv.html">CV Portofolio</a>
-                    <a class="footer-link" href="tentang.html">Tentang Kami</a>
+                    <a class="footer-link" href="index.php">Beranda</a>
+                    <a class="footer-link" href="cv.php">CV Portofolio</a>
+                    <a class="footer-link" href="tentang.php">Tentang Kami</a>
                     <a class="footer-link" href="https://wa.me/qr/4JIAIX4FXTSDC1">Kontak</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -165,11 +268,11 @@
             <!-- Left: Info -->
             <div class="player-left">
                 <div class="player-album-art">
-                    <img src="images/travisscott.jpeg" alt="Album Art">
+                    <img src="images/apakek.png" alt="Album Art">
                 </div>
                 <div class="player-track-info">
-                    <h6>MELTDOWN (ft. Drake)</h6>
-                    <small>Travis Scott, Drake</small>
+                    <h6>JJ PTN</h6>
+                    <small>SIAPAKEK</small>
                 </div>
             </div>
 
@@ -189,12 +292,12 @@
                 <div class="progress-bar-bg">
                     <div class="progress-bar-fill" id="progressBar"></div>
                 </div>
-                <span id="duration" class="time-text">4:07</span>
+                <span id="duration" class="time-text">7:25</span>
             </div>
         </div>
         
         <!-- Audio Tag dengan Error Handler -->
-        <audio id="audioPlayer" src="meltdown.mp3" preload="auto" onerror="alert('File musik.mp3 TIDAK DITEMUKAN atau rusak.\n\nPastikan nama file: musik.mp3 (huruf kecil semua)')"></audio>
+        <audio id="audioPlayer" src="sudahbiasaterjadi.mp3" preload="auto" onerror="alert('File musik.mp3 TIDAK DITEMUKAN atau rusak.\n\nPastikan nama file: musik.mp3 (huruf kecil semua)')"></audio>
     </div>
     <!-- Footer End -->
 

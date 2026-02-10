@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CV - Restu Putra R.</title>
+    <title>CV - M Denis Saputra</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -266,7 +266,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
             <div style="overflow: hidden; white-space: nowrap; width: 100%; max-width: 350px;">
                  <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
@@ -277,18 +277,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0 pe-lg-5">
-                <a href="index.html" class="nav-item nav-link">Beranda</a>
-                <a href="form.html" class="nav-item nav-link">Form Pendaftaran</a>
-                <a href="data.html" class="nav-item nav-link">Data Pendaftar</a>
+                <a href="index.php" class="nav-item nav-link">Beranda</a>
+                <a href="form.php" class="nav-item nav-link">Form Pendaftaran</a>
+                <a href="data.php" class="nav-item nav-link">Data Pendaftar</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">CV</a>
                     <div class="dropdown-menu m-0">
-                        <a href="dina.html" class="dropdown-item">Dina</a>
-                        <a href="male.html" class="dropdown-item">Male</a>
-                        <a href="muti.html" class="dropdown-item">Muti</a>
-                        <a href="faadhil.html" class="dropdown-item">Faadhil</a>
-                        <a href="denis.html" class="dropdown-item active">Denis</a>
-                        <a href="rama.html" class="dropdown-item">Rama</a>
+                        <a href="dina.php" class="dropdown-item">Dina</a>
+                        <a href="male.php" class="dropdown-item">Male</a>
+                        <a href="muti.php" class="dropdown-item">Muti</a>
+                        <a href="faadhil.php" class="dropdown-item">Faadhil</a>
+                        <a href="denis.php" class="dropdown-item active">Denis</a>
+                        <a href="rama.php" class="dropdown-item">Rama</a>
                     </div>
                 </div>
             </div>
@@ -314,13 +314,13 @@
                                 <img src="images/denis.jpeg" alt="Foto Profil Rama">
                             </div>
                             <h3 class="fw-bold mb-1">M. Denis Saputra</h3>
-                            <p class="text-primary fw-bold mb-3">Fullstack Developer & Software Engineer</p>
+                            <p class="text-primary fw-bold mb-3">Agripreneur & Keuangan dan Analisis</p>
                             
                             <div class="d-flex justify-content-center gap-2 mb-2">
-                                <span class="badge bg-light text-dark border"><i class="fa fa-id-card me-1"></i> NIS: 232410134</span>
+                                <span class="badge bg-light text-dark border"><i class="fa fa-id-card me-1"></i> NIS: 232410125</span>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <span class="badge bg-light text-dark border"><i class="fa fa-university me-1"></i> STEI - K ITB</span>
+                                <span class="badge bg-light text-dark border"><i class="fa fa-university me-1"></i> Agribisnis IPB</span>
                             </div>
                         </div>
                     </div>
@@ -334,23 +334,19 @@
                             <ul class="list-unstyled contact-list">
                                 <li>
                                     <i class="fa fa-envelope"></i>
-                                    <span class="text-break">restuputraramadhannn@gmail.com</span>
+                                    <span class="text-break">denizciputz@gmail.com</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-phone"></i>
-                                    <span>+62 851-1722-7098</span>
+                                    <span>+62 89513914296</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-map-marker-alt"></i>
-                                    <span>Bandung, 27 September 2008</span>
+                                    <span>Bekasi, 7 Maret 2008</span>
                                 </li>
                                 <li>
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>linkedin.com/in/restu-putra-ramadhan-6446b9358</span>
-                                </li>
-                                <li>
-                                    <i class="fab fa-github"></i>
-                                    <span>github.com/27RamaaaDev</span>
+                                    <i class="fab fa-instagram"></i>
+                                    <span>dnssptraaa_</span>
                                 </li>
                             </ul>
                         </div>
@@ -363,15 +359,10 @@
                         <div class="card-body">
                             <h4 class="cv-section-title">Keahlian</h4>
                             <div class="d-flex flex-wrap">
-                                <span class="skill-badge">HTML5</span>
-                                <span class="skill-badge">CSS3</span>
-                                <span class="skill-badge">JavaScript</span>
-                                <span class="skill-badge">PHP</span>
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Laravel</span>
-                                <span class="skill-badge">MySQL</span>
-                                <span class="skill-badge">Git</span>
-                                <span class="skill-badge">REST API</span>
+                                <span class="skill-badge">Desain</span>
+                                <span class="skill-badge">Editing</span>
+                                <span class="skill-badge">Main Roblox</span>
+                                <span class="skill-badge">Hyper Jungle</span>
                             </div>
                         </div>
                     </div>
@@ -418,7 +409,7 @@
                     <div class="card-body p-4">
                         <h3 class="cv-section-title">Tentang Saya</h3>
                         <p class="text-secondary" style="text-align: justify;">
-                            Saya adalah seorang pengembang web yang berdedikasi dengan fokus kuat pada pengembangan Backend. Memiliki semangat tinggi dalam mempelajari teknologi baru dan memecahkan masalah kompleks melalui kode. Saat ini sedang menempuh pendidikan di Institut Teknologi Bandung dan aktif dalam berbagai proyek pengembangan perangkat lunak kampus. Saya berkomitmen untuk menciptakan solusi digital yang efisien dan skalabel.
+                            Saya adalah seorang murid SMA yang duduk dikelas 3 di SMAN 4 Bekasi, yang bercita-cita berkehidupan di Bogor, dan menempuh pendidikan disana
                         </p>
                     </div>
                 </div>
@@ -431,17 +422,17 @@
                         <!-- Item 1: SD -->
                         <div class="timeline-item">
                             <span class="timeline-date">2014 - 2020</span>
-                            <h5 class="fw-bold">SDN Kotabaru IX</h5>
+                            <h5 class="fw-bold">SDN Harapan Jaya VII</h5>
                             <p class="text-primary mb-1">6 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 88,2.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 88,1.</p>
                         </div>
 
                         <!-- Item 2: SMP -->
                         <div class="timeline-item">
                             <span class="timeline-date">2020 - 2023</span>
-                            <h5 class="fw-bold">SMPN 13 Bekasi</h5>
+                            <h5 class="fw-bold">SMPN 5 Kota Bekasi</h5>
                             <p class="text-primary mb-1">3 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 97,2. Aktif di ekstrakurikuler PMR.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 96,1.</p>
                         </div>
                 
                         <!-- Item 3: SMA -->
@@ -449,15 +440,15 @@
                             <span class="timeline-date">2023 - 2026</span>
                             <h5 class="fw-bold">SMAN 4 Bekasi</h5>
                             <p class="text-primary mb-1">3 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 89,8. Aktif di ekstrakurikuler SCI-TOS.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 88,4. Aktif di Organisasi Intra Sekolah.</p>
                         </div>
 
                         <!-- Item 4: Kuliah -->
                         <div class="timeline-item">
                             <span class="timeline-date">2026 - 2030</span>
-                            <h5 class="fw-bold">Institut Teknologi Bandung</h5>
+                            <h5 class="fw-bold">Institut Pertanian Bogor</h5>
                             <p class="text-primary mb-1">3,5 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata IPK 3,8.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata IPK 3,9.</p>
                         </div>
 
                     </div>
@@ -470,11 +461,18 @@
                         
                         <div class="timeline-item">
                             <span class="timeline-date">2024 - 2025</span>
-                            <h5 class="fw-bold">Koordinator Divisi Programming & Jaringan SCI-TOS</h5>
-                            <p class="text-primary mb-1">Proyek Website Pendaftaran Mahasiswa Baru (Tugas Besar)</p>
-                            <p class="text-muted small">Bertanggung jawab merancang arsitektur database dan API, serta mengintegrasikan sistem frontend dengan backend menggunakan PHP dan MySQL.</p>
+                            <h5 class="fw-bold">Anggota Seksi Bidang 7</h5>
+                            <p class="text-primary mb-1">P (Tugas Besar)</p>
+                            <p class="text-muted small">Bertanggung jawab</p> 
                         </div>
 
+                        <div class="timeline-item">
+                            <span class="timeline-date">2026 - 2029</span>
+                            <h5 class="fw-bold">Software Engineer</h5>
+                            <p class="text-primary mb-1">PT. Nirwana Sukses Sejahtera</p>
+                            <p class="text-muted small">Mengelola website bisnis dan memastikan sistem registrasi berjalan lancar tanpa kendala teknis.</p>
+                        </div>
+                        
                         <div class="timeline-item">
                             <span class="timeline-date">2026 - 2029</span>
                             <h5 class="fw-bold">Software Engineer</h5>
@@ -500,15 +498,15 @@
                         <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@restuputraramadhan"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/backend.ramaa"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@27.1nonlykiddo"><i class="fab fa-tiktok"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/restu-putra-ramadhan-6446b9358/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://ww w.linkedin.com/in/restu-putra-ramadhan-6446b9358/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://github.com/27RamaaaDev"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Menu Cepat</h4>
-                    <a class="footer-link" href="index.html">Beranda</a>
-                    <a class="footer-link" href="cv.html">CV Portofolio</a>
-                    <a class="footer-link" href="tentang.html">Tentang Kami</a>
+                    <a class="footer-link" href="index.php">Beranda</a>
+                    <a class="footer-link" href="cv.php">CV Portofolio</a>
+                    <a class="footer-link" href="tentang.php">Tentang Kami</a>
                     <a class="footer-link" href="https://wa.me/qr/4JIAIX4FXTSDC1">Kontak</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
