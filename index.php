@@ -292,7 +292,7 @@
                 <div class="progress-bar-bg">
                     <div class="progress-bar-fill" id="progressBar"></div>
                 </div>
-                <span id="duration" class="time-text">7:25</span>
+                <span id="duration" class="time-text">3:46</span>
             </div>
         </div>
         

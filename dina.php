@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CV - Restu Putra R.</title>
+    <title>CV - Alvrida Dien Amalia</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -342,7 +342,7 @@
                                 </li>
                                 <li>
                                     <i class="fa fa-map-marker-alt"></i>
-                                    <span>Bekasi, 1 November 2007</span>
+                                    <span>Bekasi, 01 November 2007</span>
                                 </li>
                                 <li>
                                     <i class="fab fa-instagram"></i>
@@ -412,7 +412,7 @@
                     <div class="card-body p-4">
                         <h3 class="cv-section-title">Tentang Saya</h3>
                         <p class="text-secondary" style="text-align: justify;">
-                            Saya adalah seorang pengembang web yang berdedikasi dengan fokus kuat pada pengembangan Backend. Memiliki semangat tinggi dalam mempelajari teknologi baru dan memecahkan masalah kompleks melalui kode. Saat ini sedang menempuh pendidikan di Institut Teknologi Bandung dan aktif dalam berbagai proyek pengembangan perangkat lunak kampus. Saya berkomitmen untuk menciptakan solusi digital yang efisien dan skalabel.
+                            Saya adalah seorang pegawai yang bekerja di bidang pariwisata dan memiliki skiil di bidang tari yang menempuh pendidikan di Universitas Negeri Jakarta dengan jurusan Ilmu Komunikasi.
                         </p>
                     </div>
                 </div>
@@ -435,7 +435,7 @@
                             <span class="timeline-date">2020 - 2023</span>
                             <h5 class="fw-bold">SMPN 13 Bekasi</h5>
                             <p class="text-primary mb-1">3 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 97,2. Aktif di ekstrakurikuler Tari.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 90,2. Aktif di ekstrakurikuler Tari.</p>
                         </div>
                 
                         <!-- Item 3: SMA -->
@@ -443,7 +443,7 @@
                             <span class="timeline-date">2023 - 2026</span>
                             <h5 class="fw-bold">SMAN 4 Bekasi</h5>
                             <p class="text-primary mb-1">3 Tahun</p>
-                            <p class="text-muted small">Lulus dengan nilai rata-rata 89,8. Aktif di ekstrakurikuler Sanggar Ketupat.</p>
+                            <p class="text-muted small">Lulus dengan nilai rata-rata 89,4. Aktif di ekstrakurikuler Sanggar Ketupat.</p>
                         </div>
 
                         <!-- Item 4: Kuliah -->
@@ -473,7 +473,7 @@
                             <span class="timeline-date">2026 - 2029</span>
                             <h5 class="fw-bold">Professional Dancer</h5>
                             <p class="text-primary mb-1">Sanggar Tari Andri</p>
-                            <p class="text-muted small">Mengelola website bisnis dan memastikan sistem registrasi berjalan lancar tanpa kendala teknis.</p>
+                            <p class="text-muted small">Mengelola berbagai kostum tari tradisional dan menyewakan jasa make up.</p>
                         </div>
                     </div>
                 </div>

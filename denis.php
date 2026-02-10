@@ -462,22 +462,22 @@
                         <div class="timeline-item">
                             <span class="timeline-date">2024 - 2025</span>
                             <h5 class="fw-bold">Anggota Seksi Bidang 7</h5>
-                            <p class="text-primary mb-1">P (Tugas Besar)</p>
-                            <p class="text-muted small">Bertanggung jawab</p> 
+                            <p class="text-primary mb-1">OSIS SMAN 4 Bekasi</p>
+                            <p class="text-muted small">Bertanggung jawab dalam melaksanakan program kerja selama satu tahun.</p> 
                         </div>
 
                         <div class="timeline-item">
-                            <span class="timeline-date">2026 - 2029</span>
-                            <h5 class="fw-bold">Software Engineer</h5>
-                            <p class="text-primary mb-1">PT. Nirwana Sukses Sejahtera</p>
-                            <p class="text-muted small">Mengelola website bisnis dan memastikan sistem registrasi berjalan lancar tanpa kendala teknis.</p>
+                            <span class="timeline-date">2024 - 2025</span>
+                            <h5 class="fw-bold">Ketua Pelaksana PILKETOS 2025</h5>
+                            <p class="text-primary mb-1">OSIS SMAN 4 Bekasi</p>
+                            <p class="text-muted small">Bertanggung jawab atas terlaksananya event pemilihan ketua OSIS dan MPK tahun 2025/2026</p>
                         </div>
                         
                         <div class="timeline-item">
                             <span class="timeline-date">2026 - 2029</span>
-                            <h5 class="fw-bold">Software Engineer</h5>
-                            <p class="text-primary mb-1">PT. Nirwana Sukses Sejahtera</p>
-                            <p class="text-muted small">Mengelola website bisnis dan memastikan sistem registrasi berjalan lancar tanpa kendala teknis.</p>
+                            <h5 class="fw-bold">Ketua 1 OSIS SMAN 4 Bekasi</h5>
+                            <p class="text-primary mb-1">OSIS SMAN 4 Bekasi</p>
+                            <p class="text-muted small">Bertanggung jawab atas seksi bidang 1 hingga 5 dan internal sekolah.</p>
                         </div>
                     </div>
                 </div>
