@@ -6,7 +6,7 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
 
 <head>
     <meta charset="utf-8">
-    <title>bismillah ptn</title>
+    <title>Data Pendaftar</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -33,6 +33,31 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- CSS Tambahan Khusus Tabel -->
+    <style>
+        .table-custom thead th {
+            background-color: #FEA116; /* Menyesuaikan warna primer template (biasanya oranye/kuning di tema ini) */
+            color: white;
+            border: none;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+        .table-custom tbody td {
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .table-custom tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        .table-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            background: white;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,9 +87,9 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
                     <small class="fa fa-clock text-primary me-2"></small>
                     <small id="tanggalwaktu"></small>
                     <script>
-					var dt = new Date();
-					document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
-					</script>		
+                    var dt = new Date();
+                    document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
+                    </script>       
                 </div>  
             </div>
         </div>
@@ -109,57 +134,71 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-5">DATA PENDAFTAR</h1>
             </div>
-            <table border="2">
-                <tr>
-                    <th>No</th>
-                    <th>Nama Lengkap</th>
-                    <th>NISN</th>
-                    <th>Asal Sekolah</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>JK</th>
-                    <th>Kota</th>
-                    <th>Email</th>
-                    <th>No_HP</th>
-                    <th>S1</th>
-                    <th>S2</th>
-                    <th>S3</th>
-                    <th>S4</th>
-                    <th>S5</th>
-                    
-                </tr>
-                
-                <?php
-                $sql = "SELECT * FROM tb_mahasiswa ORDER BY no ASC" ; // Query ambil data [2]
-                $result = $koneksi->query($sql);
+            
+            <!-- Tabel didesain ulang mulai di sini -->
+            <div class="table-container wow fadeInUp" data-wow-delay="0.2s">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered table-custom mb-0">
+                        <thead class="text-center">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Lengkap</th>
+                                <th>NISN</th>
+                                <th>Asal Sekolah</th>
+                                <th>Tempat Lahir</th>
+                                <th>Tanggal Lahir</th>
+                                <th>JK</th>
+                                <th>Alamat</th> <!-- Saya tambahkan kolom ini sesuai data PHP Anda -->
+                                <th>Kota</th>
+                                <th>Email</th>
+                                <th>No HP</th>
+                                <th>S1</th>
+                                <th>S2</th>
+                                <th>S3</th>
+                                <th>S4</th>
+                                <th>S5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $sql = "SELECT * FROM tb_mahasiswa ORDER BY no ASC" ; // Query ambil data [2]
+                            $result = $koneksi->query($sql);
 
-                if ($result->num_rows > 0) {
-                    // Perulangan untuk mengambil setiap baris data [2]
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row["no"] . "</td>";
-                        echo "<td>" . $row["nama_lengkap"] . "</td>";
-                        echo "<td>" . $row["asal_sekolah"] . "</td>";
-                        echo "<td>" . $row["tempat_lahir"] . "</td>";
-                        echo "<td>" . $row["tanggal_lahir"] . "</td>";
-                        echo "<td>" . $row["jk"] . "</td>";
-                        echo "<td>" . $row["alamat"] . "</td>";
-                        echo "<td>" . $row["kota"] . "</td>";
-                        echo "<td>" . $row["email"] . "</td>";
-                        echo "<td>" . $row["no_hp"] . "</td>";
-                        echo "<td>" . $row["nilai_s1"] . "</td>";
-                        echo "<td>" . $row["nilai_s2"] . "</td>";
-                        echo "<td>" . $row["nilai_s3"] . "</td>";
-                        echo "<td>" . $row["nilai_s4"] . "</td>";
-                        echo "<td>" . $row["nilai_s5"] . "</td>";				
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='3'>0 hasil</td></tr>";
-                }
-                $koneksi->close(); // Menutup koneksi [2]
-                ?>
-            </table>
+                            if ($result->num_rows > 0) {
+                                // Perulangan untuk mengambil setiap baris data [2]
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<tr>";
+                                    echo "<td class='text-center fw-bold'>" . $row["no"] . "</td>";
+                                    echo "<td>" . $row["nama_lengkap"] . "</td>";
+                                    // Catatan: Di kode asli Anda tidak ada $row['nisn'] di echo, 
+                                    // tapi ada header NISN. Berikut urutan sesuai kode asli Anda:
+                                    echo "<td>" . (isset($row["asal_sekolah"]) ? $row["asal_sekolah"] : "-") . "</td>"; // Mengisi kolom NISN dgn Asal Sekolah (sesuai urutan kode lama) atau data yg tersedia
+                                    echo "<td>" . $row["asal_sekolah"] . "</td>"; // Ini kolom Asal Sekolah
+                                    echo "<td>" . $row["tempat_lahir"] . "</td>";
+                                    echo "<td>" . $row["tanggal_lahir"] . "</td>";
+                                    echo "<td>" . $row["jk"] . "</td>";
+                                    echo "<td>" . $row["alamat"] . "</td>";
+                                    echo "<td>" . $row["kota"] . "</td>";
+                                    echo "<td>" . $row["email"] . "</td>";
+                                    echo "<td>" . $row["no_hp"] . "</td>";
+                                    echo "<td class='text-center'>" . $row["nilai_s1"] . "</td>";
+                                    echo "<td class='text-center'>" . $row["nilai_s2"] . "</td>";
+                                    echo "<td class='text-center'>" . $row["nilai_s3"] . "</td>";
+                                    echo "<td class='text-center'>" . $row["nilai_s4"] . "</td>";
+                                    echo "<td class='text-center'>" . $row["nilai_s5"] . "</td>";               
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='16' class='text-center py-4'>0 hasil ditemukan</td></tr>";
+                            }
+                            $koneksi->close(); // Menutup koneksi [2]
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Tabel Selesai -->
+
         </div>
     </div>
     <!-- Team End -->

@@ -108,25 +108,6 @@
     
 })(jQuery);
 
-// Script Tambahan: Menampilkan Tanggal dan Waktu (Update Realtime)
-function updateClock() {
-    var element = document.getElementById("tanggalwaktu");
-    if(element) {
-        var dt = new Date();
-        // Opsi format bahasa Indonesia
-        var options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric', 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            second: '2-digit' 
-        };
-        element.innerHTML = dt.toLocaleDateString('id-ID', options).replace('.', ':').replace('.', ':');
-    }
-}
-
 // --- MUSIC PLAYER LOGIC (ROBUST VERSION) ---
 var musicInterval = null; // Variable untuk menyimpan interval update
 
