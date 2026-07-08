@@ -14,16 +14,11 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,12 +52,7 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-clock text-primary me-2"></small>
-                    <small id="tanggalwaktu"></small>
-                    <script>
-					var dt = new Date();
-					document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
-					</script>		
-                </div>  
+                    <small id="tanggalwaktu"></small></div>
             </div>
         </div>
     </div>
@@ -71,10 +61,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
-            <div style="overflow: hidden; white-space: nowrap; width: 350px;">
-                 <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
-            </div>
+            <img src="images/logoitb.png" alt="Logo ITB" style="height: 60px; margin-right: 15px;">
+            <div class="brand-copy"><span>Institut Teknologi Bandung</span><small>Bismillah PTN</small></div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -107,7 +95,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <!-- Background Image -->
-                    <img class="w-100" src="images/itb1.jpeg" alt="Image" style="height: 700px; object-fit: cover;">
+                    <img class="w-100" src="images/itb1.jpeg" alt="Gedung Institut Teknologi Bandung" decoding="async" fetchpriority="high" style="height: 700px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center">
                         <div class="container">
                             <div class="row align-items-center justify-content-center justify-content-lg-start">
@@ -118,7 +106,7 @@
                                 </div>
                                 <!-- Kolom Gambar Kampus (Overlay) -->
                                 <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                    <img class="img-fluid" src="images/itb2.jpeg" alt="" style="border: 5px solid white; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                                    <img class="img-fluid" src="images/itb2.jpeg" alt="Suasana kampus ITB" decoding="async" style="border: 5px solid white; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
                                 </div>
                             </div>
                         </div>
@@ -136,79 +124,79 @@
                 <h6 class="text-primary text-uppercase">Tim Kami</h6>
                 <h1 class="mb-5">ANGGOTA KELOMPOK</h1>
             </div>
-            
+
             <div class="row g-4 justify-content-center">
                 <!-- Anggota 1 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light p-4 text-center">
                         <div class="team-img-box mb-3">
-                            <img src="images/dina.jpeg" alt="">                         
+                            <img src="images/dina.jpeg" alt="Foto Alvrida Dien Amalia" loading="lazy" decoding="async">
                         </div>
                         <h5 class="fw-bold mb-0">Alvrida Dien Amalia</h5>
                         <small class="text-primary d-block mb-2">NIS : 232410256</small>
-                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/alvridamalia" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/alvridamalia" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>  
-                
-                <!-- Anggota 2 -->        
+                </div>
+
+                <!-- Anggota 2 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light p-4 text-center">
                         <div class="team-img-box mb-3">
-                            <img src="images/male.jpeg" alt="">                         
+                            <img src="images/male.jpeg" alt="Foto Andi Maleeka E. Z." loading="lazy" decoding="async">
                         </div>
                         <h5 class="fw-bold mb-0">Andi Maleeka E. Z.</h5>
                         <small class="text-primary d-block mb-2">NIS : 232410004</small>
-                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/zavmezh" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/zavmezh" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>  
-                
-                <!-- Anggota 3 -->        
+                </div>
+
+                <!-- Anggota 3 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light p-4 text-center">
                         <div class="team-img-box mb-3">
-                            <img src="images/muti.jpeg" alt="">                         
+                            <img src="images/muti.jpeg" alt="Foto Muthia Al-Jatsiyah H." loading="lazy" decoding="async">
                         </div>
                         <h5 class="fw-bold mb-0">Muthia Al-Jatsiyah H.</h5>
                         <small class="text-primary d-block mb-2">NIS : 232410022</small>
-                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/muthieealh" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/muthieealh" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>  
-                
-                <!-- Anggota 4 -->        
+                </div>
+
+                <!-- Anggota 4 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item bg-light p-4 text-center">
                         <div class="team-img-box mb-3">
-                            <img src="images/faadhil.jpeg" alt="">                         
+                            <img src="images/faadhil.jpeg" alt="Foto Faadhil Hermin W." loading="lazy" decoding="async">
                         </div>
                         <h5 class="fw-bold mb-0">Faadhil Hermin W.</h5>
                         <small class="text-primary d-block mb-2">NIS : 232410013</small>
-                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/faadhwill" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/faadhwill" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>  
-                
-                <!-- Anggota 5 -->        
+                </div>
+
+                <!-- Anggota 5 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light p-4 text-center">
                         <div class="team-img-box mb-3">
-                            <img src="images/denis.jpeg" alt="">                         
+                            <img src="images/denis.jpeg" alt="Foto M. Denis Saputra" loading="lazy" decoding="async">
                         </div>
                         <h5 class="fw-bold mb-0">M. Denis Saputra</h5>
                         <small class="text-primary d-block mb-2">NIS : 232410125</small>
-                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/dnssptraaa_" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://instagram.com/dnssptraaa_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>  
-                
-                <!-- Anggota 6 -->        
+                </div>
+
+                <!-- Anggota 6 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light p-4 text-center">
                         <div class="team-img-box mb-3">
-                            <img src="images/rama.jpg" alt="">                         
+                            <img src="images/rama.JPG" alt="Foto Restu Putra R." loading="lazy" decoding="async">
                         </div>
                         <h5 class="fw-bold mb-0">Restu Putra R.</h5>
                         <small class="text-primary d-block mb-2">NIS : 232410134</small>
-                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://www.instagram.com/backend.ramaa" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-primary mx-auto rounded-circle" href="https://www.instagram.com/backend.ramaa" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>              
+                </div>
             </div>
         </div>
     </div>
@@ -248,14 +236,14 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        Copyright &copy; 2026 <a class="border-bottom" href="#">Restu Putra Ramadhan</a>, All Right Reserved.
+                        Copyright &copy; 2026 <a class="border-bottom" href="index.php">Restu Putra Ramadhan</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="index.php">Beranda</a>
+                            <a href="form.php">Pendaftaran</a>
+                            <a href="data.php">Data</a>
+                            <a href="rama.php">CV</a>
                         </div>
                     </div>
                 </div>
@@ -268,7 +256,7 @@
             <!-- Left: Info -->
             <div class="player-left">
                 <div class="player-album-art">
-                    <img src="images/apakek.png" alt="Album Art">
+                    <img src="images/apakek.png" alt="Sampul lagu JJ PTN" loading="lazy" decoding="async">
                 </div>
                 <div class="player-track-info">
                     <h6>JJ PTN</h6>
@@ -295,9 +283,9 @@
                 <span id="duration" class="time-text">3:46</span>
             </div>
         </div>
-        
-        <!-- Audio Tag dengan Error Handler -->
-        <audio id="audioPlayer" src="sudahbiasaterjadi.mp3" preload="auto" onerror="alert('File musik.mp3 TIDAK DITEMUKAN atau rusak.\n\nPastikan nama file: musik.mp3 (huruf kecil semua)')"></audio>
+
+        <!-- Audio Tag -->
+        <audio id="audioPlayer" src="sudahbiasaterjadi.mp3" preload="metadata"></audio>
     </div>
     <!-- Footer End -->
 
@@ -305,16 +293,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

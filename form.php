@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+$flash = $_SESSION['form_flash'] ?? null;
+unset($_SESSION['form_flash']);
+
+function e($value)
+{
+    return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 
@@ -14,16 +29,11 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,12 +67,7 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-clock text-primary me-2"></small>
-                    <small id="tanggalwaktu"></small>
-                    <script>
-					var dt = new Date();
-					document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
-					</script>		
-                </div>  
+                    <small id="tanggalwaktu"></small></div>
             </div>
         </div>
     </div>
@@ -71,10 +76,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
-            <div style="overflow: hidden; white-space: nowrap; width: 350px;">
-                 <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
-            </div>
+            <img src="images/logoitb.png" alt="Logo ITB" style="height: 60px; margin-right: 15px;">
+            <div class="brand-copy"><span>Institut Teknologi Bandung</span><small>Bismillah PTN</small></div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -112,28 +115,35 @@
                 <div class="col-lg-10">
                     <div class="card shadow-lg border-0 rounded-3 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="card-body p-5">
+                            <?php if ($flash): ?>
+                                <div class="alert alert-<?= e($flash['type']) ?> mb-4" role="alert">
+                                    <?= e($flash['message']) ?>
+                                </div>
+                            <?php endif; ?>
+
                             <form action="proses.php" method="POST">
+                                <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
                                 <div class="row g-4">
                                     <div class="col-12">
                                         <h5 class="text-primary border-bottom pb-2">Informasi Pribadi</h5>
                                     </div>
-                                    
+
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" maxlength="50" required>
                                             <label for="nama_lengkap">Nama Lengkap</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="nisn" name="nisn" placeholder="NISN" required>
+                                            <input type="text" class="form-control" id="nisn" name="nisn" placeholder="NISN" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
                                             <label for="nisn">NISN</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir">
+                                            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" maxlength="50" required>
                                             <label for="tempat_lahir">Tempat Lahir</label>
                                         </div>
                                     </div>
@@ -146,8 +156,8 @@
 
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="jk" name="jk">
-                                                <option selected disabled>Pilih Jenis Kelamin</option>
+                                            <select class="form-select" id="jk" name="jk" required>
+                                                <option value="" selected disabled>Pilih Jenis Kelamin</option>
                                                 <option value="L">Laki-laki</option>
                                                 <option value="P">Perempuan</option>
                                             </select>
@@ -156,7 +166,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No. HP">
+                                            <input type="tel" class="form-control" id="no_hp" name="no_hp" placeholder="No. HP" inputmode="tel" maxlength="20">
                                             <label for="no_hp">No. HP / WhatsApp</label>
                                         </div>
                                     </div>
@@ -167,21 +177,21 @@
 
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Anda">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Anda" maxlength="50">
                                             <label for="email">Email</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="Asal Sekolah">
+                                            <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="Asal Sekolah" maxlength="50" required>
                                             <label for="asal_sekolah">Asal Sekolah</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="kota" name="kota">
-                                                <option selected disabled>Pilih Kota</option>
+                                            <select class="form-select" id="kota" name="kota" required>
+                                                <option value="" selected disabled>Pilih Kota</option>
                                                 <option value="Bekasi">Bekasi</option>
                                                 <option value="Jakarta">Jakarta</option>
                                                 <option value="Bogor">Bogor</option>
@@ -191,10 +201,10 @@
                                             <label for="kota">Kota Domisili</label>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Alamat Lengkap" id="alamat" name="alamat" style="height: 100px"></textarea>
+                                            <textarea class="form-control" placeholder="Alamat Lengkap" id="alamat" name="alamat" maxlength="50" style="height: 100px" required></textarea>
                                             <label for="alamat">Alamat Lengkap</label>
                                         </div>
                                     </div>
@@ -206,31 +216,31 @@
 
                                     <div class="col-md-2 col-6">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="nilai_s1" name="nilai_s1" placeholder="Smt 1">
+                                            <input type="number" class="form-control" id="nilai_s1" name="nilai_s1" placeholder="Smt 1" min="0" max="100" step="1" required>
                                             <label for="nilai_s1">Smt 1</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="nilai_s2" name="nilai_s2" placeholder="Smt 2">
+                                            <input type="number" class="form-control" id="nilai_s2" name="nilai_s2" placeholder="Smt 2" min="0" max="100" step="1" required>
                                             <label for="nilai_s2">Smt 2</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="nilai_s3" name="nilai_s3" placeholder="Smt 3">
+                                            <input type="number" class="form-control" id="nilai_s3" name="nilai_s3" placeholder="Smt 3" min="0" max="100" step="1" required>
                                             <label for="nilai_s3">Smt 3</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="nilai_s4" name="nilai_s4" placeholder="Smt 4">
+                                            <input type="number" class="form-control" id="nilai_s4" name="nilai_s4" placeholder="Smt 4" min="0" max="100" step="1" required>
                                             <label for="nilai_s4">Smt 4</label>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-6">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="nilai_s5" name="nilai_s5" placeholder="Smt 5">
+                                            <input type="number" class="form-control" id="nilai_s5" name="nilai_s5" placeholder="Smt 5" min="0" max="100" step="1" required>
                                             <label for="nilai_s5">Smt 5</label>
                                         </div>
                                     </div>
@@ -284,14 +294,14 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        Copyright &copy; 2026 <a class="border-bottom" href="#">Restu Putra Ramadhan</a>, All Right Reserved.
+                        Copyright &copy; 2026 <a class="border-bottom" href="index.php">Restu Putra Ramadhan</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="index.php">Beranda</a>
+                            <a href="form.php">Pendaftaran</a>
+                            <a href="data.php">Data</a>
+                            <a href="rama.php">CV</a>
                         </div>
                     </div>
                 </div>
@@ -304,16 +314,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

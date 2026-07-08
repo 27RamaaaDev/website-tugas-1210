@@ -1,5 +1,10 @@
 <?php
 include 'koneksi.php'; // Menyertakan file koneksi [3]
+
+function e($value)
+{
+    return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
+}
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -17,47 +22,18 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- CSS Tambahan Khusus Tabel -->
-    <style>
-        .table-custom thead th {
-            background-color: #FEA116; /* Menyesuaikan warna primer template (biasanya oranye/kuning di tema ini) */
-            color: white;
-            border: none;
-            white-space: nowrap;
-            vertical-align: middle;
-        }
-        .table-custom tbody td {
-            vertical-align: middle;
-            white-space: nowrap;
-        }
-        .table-custom tbody tr:hover {
-            background-color: #f1f1f1;
-        }
-        .table-container {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            background: white;
-            padding: 20px;
-        }
-    </style>
+    <!-- Table styles moved to css/style.css -->
 </head>
 
 <body>
@@ -85,12 +61,7 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-clock text-primary me-2"></small>
-                    <small id="tanggalwaktu"></small>
-                    <script>
-                    var dt = new Date();
-                    document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
-                    </script>       
-                </div>  
+                    <small id="tanggalwaktu"></small></div>
             </div>
         </div>
     </div>
@@ -99,10 +70,8 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
-            <div style="overflow: hidden; white-space: nowrap; width: 350px;">
-                 <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
-            </div>
+            <img src="images/logoitb.png" alt="Logo ITB" style="height: 60px; margin-right: 15px;">
+            <div class="brand-copy"><span>Institut Teknologi Bandung</span><small>Bismillah PTN</small></div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -134,7 +103,7 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-5">DATA PENDAFTAR</h1>
             </div>
-            
+
             <!-- Tabel didesain ulang mulai di sini -->
             <div class="table-container wow fadeInUp" data-wow-delay="0.2s">
                 <div class="table-responsive">
@@ -161,37 +130,41 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
                         </thead>
                         <tbody>
                             <?php
-                            $sql = "SELECT * FROM tb_mahasiswa ORDER BY no ASC" ; // Query ambil data [2]
-                            $result = $koneksi->query($sql);
+                            $sql = "SELECT no, nama_lengkap, nisn, asal_sekolah, tempat_lahir, tanggal_lahir, jk, alamat, kota, email, no_hp, nilai_s1, nilai_s2, nilai_s3, nilai_s4, nilai_s5 FROM tb_mahasiswa ORDER BY no ASC";
+                            $result = $koneksi ? $koneksi->query($sql) : false;
 
-                            if ($result->num_rows > 0) {
-                                // Perulangan untuk mengambil setiap baris data [2]
-                                while($row = $result->fetch_assoc()) {
+                            if ($result && $result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
                                     echo "<tr>";
-                                    echo "<td class='text-center fw-bold'>" . $row["no"] . "</td>";
-                                    echo "<td>" . $row["nama_lengkap"] . "</td>";
-                                    // Catatan: Di kode asli Anda tidak ada $row['nisn'] di echo, 
-                                    // tapi ada header NISN. Berikut urutan sesuai kode asli Anda:
-                                    echo "<td>" . (isset($row["asal_sekolah"]) ? $row["asal_sekolah"] : "-") . "</td>"; // Mengisi kolom NISN dgn Asal Sekolah (sesuai urutan kode lama) atau data yg tersedia
-                                    echo "<td>" . $row["asal_sekolah"] . "</td>"; // Ini kolom Asal Sekolah
-                                    echo "<td>" . $row["tempat_lahir"] . "</td>";
-                                    echo "<td>" . $row["tanggal_lahir"] . "</td>";
-                                    echo "<td>" . $row["jk"] . "</td>";
-                                    echo "<td>" . $row["alamat"] . "</td>";
-                                    echo "<td>" . $row["kota"] . "</td>";
-                                    echo "<td>" . $row["email"] . "</td>";
-                                    echo "<td>" . $row["no_hp"] . "</td>";
-                                    echo "<td class='text-center'>" . $row["nilai_s1"] . "</td>";
-                                    echo "<td class='text-center'>" . $row["nilai_s2"] . "</td>";
-                                    echo "<td class='text-center'>" . $row["nilai_s3"] . "</td>";
-                                    echo "<td class='text-center'>" . $row["nilai_s4"] . "</td>";
-                                    echo "<td class='text-center'>" . $row["nilai_s5"] . "</td>";               
+                                    echo "<td class='text-center fw-bold'>" . e($row["no"]) . "</td>";
+                                    echo "<td>" . e($row["nama_lengkap"]) . "</td>";
+                                    echo "<td>" . e($row["nisn"]) . "</td>";
+                                    echo "<td>" . e($row["asal_sekolah"]) . "</td>";
+                                    echo "<td>" . e($row["tempat_lahir"]) . "</td>";
+                                    echo "<td>" . e($row["tanggal_lahir"]) . "</td>";
+                                    echo "<td>" . e($row["jk"]) . "</td>";
+                                    echo "<td>" . e($row["alamat"]) . "</td>";
+                                    echo "<td>" . e($row["kota"]) . "</td>";
+                                    echo "<td>" . e($row["email"]) . "</td>";
+                                    echo "<td>" . e($row["no_hp"]) . "</td>";
+                                    echo "<td class='text-center'>" . e($row["nilai_s1"]) . "</td>";
+                                    echo "<td class='text-center'>" . e($row["nilai_s2"]) . "</td>";
+                                    echo "<td class='text-center'>" . e($row["nilai_s3"]) . "</td>";
+                                    echo "<td class='text-center'>" . e($row["nilai_s4"]) . "</td>";
+                                    echo "<td class='text-center'>" . e($row["nilai_s5"]) . "</td>";
                                     echo "</tr>";
                                 }
+                            } elseif ($result) {
+                                echo "<tr><td colspan='16' class='text-center py-4'>Belum ada data pendaftar.</td></tr>";
                             } else {
-                                echo "<tr><td colspan='16' class='text-center py-4'>0 hasil ditemukan</td></tr>";
+                                $error = $koneksi ? $koneksi->error : 'Koneksi database belum tersedia.';
+                                error_log('Gagal mengambil data pendaftar: ' . $error);
+                                echo "<tr><td colspan='16' class='text-center py-4 text-danger'>Data belum bisa dimuat. Periksa koneksi database.</td></tr>";
                             }
-                            $koneksi->close(); // Menutup koneksi [2]
+
+                            if ($koneksi) {
+                                $koneksi->close();
+                            }
                             ?>
                         </tbody>
                     </table>
@@ -202,7 +175,7 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
         </div>
     </div>
     <!-- Team End -->
-            
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -238,14 +211,14 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        Copyright &copy; 2026 <a class="border-bottom" href="#">Restu Putra Ramadhan</a>, All Right Reserved.
+                        Copyright &copy; 2026 <a class="border-bottom" href="index.php">Restu Putra Ramadhan</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="index.php">Beranda</a>
+                            <a href="form.php">Pendaftaran</a>
+                            <a href="data.php">Data</a>
+                            <a href="rama.php">CV</a>
                         </div>
                     </div>
                 </div>
@@ -258,16 +231,7 @@ include 'koneksi.php'; // Menyertakan file koneksi [3]
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

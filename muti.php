@@ -14,218 +14,18 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- Custom CSS for CV -->
-    <style>
-        /* Mencegah Slider Samping (Scrollbar Horizontal) */
-        body, html {
-            overflow-x: hidden;
-            background-color: #f5f7fa; /* Sedikit abu-abu untuk background body agar putihnya kontras */
-        }
-
-        /* --- STYLING SIDEBAR --- */
-        .sidebar-container {
-            background-color: #0F4C81; /* Warna Biru ITB */
-            color: white;
-            border-radius: 15px;
-            padding: 30px 25px; /* Sedikit diperlebar paddingnya */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* Reset style kartu di dalam sidebar agar menyatu */
-        .sidebar-container .cv-card {
-            background: transparent;
-            box-shadow: none;
-            border: none;
-            margin-bottom: 25px;
-            padding: 0;
-        }
-
-        .sidebar-container .card-body {
-            padding: 0;
-        }
-
-        /* Warna teks khusus sidebar */
-        .sidebar-container h3, 
-        .sidebar-container h4, 
-        .sidebar-container h5,
-        .sidebar-container .fw-bold {
-            color: white !important;
-        }
-
-        .sidebar-container .text-primary {
-            color: #F8C300 !important; /* Ubah biru menjadi Emas */
-        }
-
-        .sidebar-container .text-muted,
-        .sidebar-container .text-dark,
-        .sidebar-container .text-secondary {
-            color: #e0e0e0 !important;
-        }
-
-        /* Judul Section di Sidebar */
-        .sidebar-container .cv-section-title {
-            color: #F8C300; /* Emas */
-            border-left-color: #F8C300;
-            margin-bottom: 20px;
-            font-size: 1.25rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Kontak Icons */
-        .sidebar-container .contact-list i {
-            background: rgba(255,255,255,0.1);
-            color: #F8C300;
-        }
-
-        /* Skill Badges - DIRAPIKAN */
-        .sidebar-container .skill-badge {
-            background-color: rgba(255,255,255,0.15);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 25px;
-            margin: 0 8px 10px 0; /* Jarak antar badge lebih rapi */
-            display: inline-block;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .sidebar-container .skill-badge:hover {
-            background-color: #F8C300;
-            color: #0F4C81;
-            transform: translateY(-2px);
-            font-weight: 600;
-        }
-
-        /* Badge NIS/Univ */
-        .sidebar-container .badge.bg-light {
-            background-color: rgba(255,255,255,0.1) !important;
-            color: white !important;
-            border: 1px solid rgba(255,255,255,0.2) !important;
-        }
-        
-        /* Progress bar background - DIRAPIKAN */
-        .sidebar-container .progress {
-            background-color: rgba(255,255,255,0.2);
-            height: 8px !important; /* Sedikit lebih tebal */
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .sidebar-container .progress-bar {
-            background-color: #F8C300 !important;
-        }
-
-        .sidebar-divider {
-            border-top: 1px solid rgba(255,255,255,0.15);
-            margin: 20px 0;
-        }
-
-        /* --- END SIDEBAR STYLING --- */
-
-
-        /* Profile Image Style */
-        .profile-img-container {
-            position: relative;
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 20px auto;
-            border: 5px solid #F8C300; /* Warna Emas */
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        }
-
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .cv-section-title {
-            border-left: 5px solid #0F4C81; /* Biru ITB */
-            padding-left: 15px;
-            margin-bottom: 20px;
-            color: #0F4C81;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .cv-card {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: white;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 25px;
-            border-left: 2px solid #e0e0e0;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0; /* Hapus margin bawah item terakhir agar rapi */
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            background: #F8C300;
-            border-radius: 50%;
-        }
-
-        .timeline-date {
-            font-size: 0.85rem;
-            color: #666;
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .contact-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-list i {
-            width: 35px;
-            height: 35px;
-            background: #f0f4f8;
-            color: #0F4C81;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-    </style>
+    <!-- CV styles moved to css/style.css -->
 </head>
 
 <body>
@@ -253,12 +53,7 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-clock text-primary me-2"></small>
-                    <small id="tanggalwaktu"></small>
-                    <script>
-					var dt = new Date();
-					document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
-					</script>		
-                </div>  
+                    <small id="tanggalwaktu"></small></div>
             </div>
         </div>
     </div>
@@ -267,10 +62,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="images/logoitb.png" alt="Logo" style="height: 60px; margin-right: 15px;">
-            <div style="overflow: hidden; white-space: nowrap; width: 100%; max-width: 350px;">
-                 <marquee scrollamount="5"><h2 class="m-0 text-primary">INSTITUT TEKNOLOGI BANDUNG</h2></marquee>
-            </div>
+            <img src="images/logoitb.png" alt="Logo ITB" style="height: 60px; margin-right: 15px;">
+            <div class="brand-copy"><span>Institut Teknologi Bandung</span><small>Bismillah PTN</small></div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -299,23 +92,23 @@
     <!-- CV Content Start -->
     <div class="container py-5 mt-3">
         <div class="row">
-            
+
             <!-- Left Sidebar -->
             <div class="col-lg-4 mb-4">
-                
+
                 <!-- CONTAINER SIDEBAR (Baru: dengan Background) -->
                 <div class="sidebar-container wow fadeInLeft" data-wow-delay="0.1s">
-                    
+
                     <!-- PROFIL UTAMA -->
                     <div class="cv-card card profile-card">
                         <div class="card-body text-center">
                             <div class="profile-img-container mb-3 wow zoomIn" data-wow-delay="0.2s">
                                 <!-- Pastikan gambar rama.jpeg ada -->
-                                <img src="images/muti.jpeg" alt="Foto Profil Rama">
+                                <img src="images/muti.jpeg" alt="Foto profil Muthia Al-Jatsiyah Hidayati" decoding="async">
                             </div>
                             <h3 class="fw-bold mb-1">Muthia Al-Jatsiyah Hidayati</h3>
                             <p class="text-primary fw-bold mb-3">Legal Officer</p>
-                            
+
                             <div class="d-flex justify-content-center gap-2 mb-2">
                                 <span class="badge bg-light text-dark border"><i class="fa fa-id-card me-1"></i> NIS: 232410022</span>
                             </div>
@@ -376,7 +169,7 @@
                     <div class="cv-card card">
                         <div class="card-body">
                             <h4 class="cv-section-title">Bahasa</h4>
-                            
+
                             <div class="mb-3">
                                 <div class="d-flex justify-content-between mb-1">
                                     <span>Indonesia</span>
@@ -386,7 +179,7 @@
                                     <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            
+
                             <div class="mb-2">
                                 <div class="d-flex justify-content-between mb-1">
                                     <span>Inggris</span>
@@ -402,7 +195,7 @@
 
                 </div>
                 <!-- END SIDEBAR CONTAINER -->
-                
+
             </div>
 
             <!-- Right Content -->
@@ -421,7 +214,7 @@
                 <div class="cv-card card wow fadeInUp" data-wow-delay="0.3s">
                     <div class="card-body p-4">
                         <h3 class="cv-section-title">Riwayat Pendidikan</h3>
-                        
+
                         <!-- Item 1: SD -->
                         <div class="timeline-item">
                             <span class="timeline-date">2014 - 2020</span>
@@ -437,7 +230,7 @@
                             <p class="text-primary mb-1">3 Tahun</p>
                             <p class="text-muted small">Lulus dengan nilai rata-rata 95,2. Aktif di ekstrakurikuler Pramuka.</p>
                         </div>
-                
+
                         <!-- Item 3: SMA -->
                         <div class="timeline-item">
                             <span class="timeline-date">2023 - 2026</span>
@@ -461,7 +254,7 @@
                 <div class="cv-card card wow fadeInUp" data-wow-delay="0.5s">
                     <div class="card-body p-4">
                         <h3 class="cv-section-title">Pengalaman Organisasi & Proyek</h3>
-                        
+
                         <div class="timeline-item">
                             <span class="timeline-date">2024 - 2025</span>
                             <h5 class="fw-bold">Ketua Umum Pramuka siliwangi-candra kirana</h5>
@@ -516,37 +309,28 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        Copyright &copy; 2026 <a class="border-bottom" href="#">Restu Putra Ramadhan</a>, All Right Reserved.
+                        Copyright &copy; 2026 <a class="border-bottom" href="index.php">Restu Putra Ramadhan</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="index.php">Beranda</a>
+                            <a href="form.php">Pendaftaran</a>
+                            <a href="data.php">Data</a>
+                            <a href="rama.php">CV</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
