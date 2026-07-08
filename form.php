@@ -52,17 +52,27 @@ function e($value)
     <!-- Spinner End -->
     <?php require __DIR__ . '/includes/navbar.php'; ?>
 
-    <!-- Team Start -->
-<div class="container-xxl py-5">
+    <!-- Form Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-5">FORMULIR PENDAFTARAN</h1>
+            <div class="registration-hero wow fadeInUp" data-wow-delay="0.1s">
+                <div>
+                    <span class="section-kicker">Pendaftaran calon mahasiswa</span>
+                    <h1>Formulir Pendaftaran</h1>
+                    <p>Isi data dengan rapi. NISN harus 10 angka dan nilai rapor menggunakan rentang 0 sampai 100.</p>
+                </div>
+                <a class="btn btn-secondary" href="data.php">Lihat Data</a>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card shadow-lg border-0 rounded-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="card-body p-5">
+                <div class="col-lg-11">
+                    <div class="registration-panel wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="registration-panel-aside">
+                            <span>01</span>
+                            <h2>Data pendaftaran</h2>
+                            <p>Data ini akan masuk ke tabel pendaftar dan bisa dilihat kembali dari halaman data.</p>
+                        </div>
+                        <div class="registration-form-body">
                             <?php if ($flash): ?>
                                 <div class="alert alert-<?= e($flash['type']) ?> mb-4" role="alert">
                                     <?= e($flash['message']) ?>
@@ -73,7 +83,10 @@ function e($value)
                                 <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
                                 <div class="row g-4">
                                     <div class="col-12">
-                                        <h5 class="text-primary border-bottom pb-2">Informasi Pribadi</h5>
+                                        <div class="form-section-title">
+                                            <span>Identitas</span>
+                                            <h5>Informasi pribadi</h5>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-6">
@@ -120,7 +133,10 @@ function e($value)
                                     </div>
 
                                     <div class="col-12 mt-4">
-                                        <h5 class="text-primary border-bottom pb-2">Alamat & Asal Sekolah</h5>
+                                        <div class="form-section-title">
+                                            <span>Kontak</span>
+                                            <h5>Alamat dan asal sekolah</h5>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-6">
@@ -158,44 +174,49 @@ function e($value)
                                     </div>
 
                                     <div class="col-12 mt-4">
-                                        <h5 class="text-primary border-bottom pb-2">Data Nilai Rapor</h5>
-                                        <p class="text-muted small">Masukkan nilai rata-rata per semester.</p>
+                                        <div class="form-section-title">
+                                            <span>Nilai</span>
+                                            <h5>Data nilai rapor</h5>
+                                            <p>Masukkan nilai rata-rata per semester.</p>
+                                        </div>
                                     </div>
 
-                                    <div class="col-md-2 col-6">
+                                    <div class="col-lg col-md-4 col-6 score-field">
                                         <div class="form-floating">
                                             <input type="number" class="form-control" id="nilai_s1" name="nilai_s1" placeholder="Smt 1" min="0" max="100" step="1" required>
                                             <label for="nilai_s1">Smt 1</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-6">
+                                    <div class="col-lg col-md-4 col-6 score-field">
                                         <div class="form-floating">
                                             <input type="number" class="form-control" id="nilai_s2" name="nilai_s2" placeholder="Smt 2" min="0" max="100" step="1" required>
                                             <label for="nilai_s2">Smt 2</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-6">
+                                    <div class="col-lg col-md-4 col-6 score-field">
                                         <div class="form-floating">
                                             <input type="number" class="form-control" id="nilai_s3" name="nilai_s3" placeholder="Smt 3" min="0" max="100" step="1" required>
                                             <label for="nilai_s3">Smt 3</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-6">
+                                    <div class="col-lg col-md-6 col-6 score-field">
                                         <div class="form-floating">
                                             <input type="number" class="form-control" id="nilai_s4" name="nilai_s4" placeholder="Smt 4" min="0" max="100" step="1" required>
                                             <label for="nilai_s4">Smt 4</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-6">
+                                    <div class="col-lg col-md-6 col-6 score-field">
                                         <div class="form-floating">
                                             <input type="number" class="form-control" id="nilai_s5" name="nilai_s5" placeholder="Smt 5" min="0" max="100" step="1" required>
                                             <label for="nilai_s5">Smt 5</label>
                                         </div>
                                     </div>
 
-                                    <div class="col-12 mt-4 text-center">
-                                        <button class="btn btn-primary py-3 px-5 w-100 mb-3" type="submit" name="submit">Daftar Sekarang</button>
-                                        <button class="btn btn-secondary py-2 px-4" type="reset" name="reset">Reset Formulir</button>
+                                    <div class="col-12 mt-4">
+                                        <div class="form-actions">
+                                            <button class="btn btn-primary py-3 px-5" type="submit" name="submit">Daftar Sekarang</button>
+                                            <button class="btn btn-secondary py-3 px-4" type="reset" name="reset">Reset</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -205,5 +226,5 @@ function e($value)
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Form End -->
     <?php require __DIR__ . '/includes/footer.php'; ?>

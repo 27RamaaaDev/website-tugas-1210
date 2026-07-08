@@ -920,6 +920,128 @@ button:focus-visible,
     font-weight: 600;
 }
 
+.registration-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.registration-hero h1 {
+    margin-bottom: .5rem;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-weight: 800;
+}
+
+.registration-hero p {
+    max-width: 45rem;
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.registration-panel {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    overflow: hidden;
+    border: 1px solid rgba(18, 63, 102, .10);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.registration-panel-aside {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(215, 167, 46, .24), transparent 14rem),
+        linear-gradient(145deg, var(--primary-dark), var(--primary));
+    color: #fff;
+    padding: 2rem;
+}
+
+.registration-panel-aside span {
+    display: inline-flex;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .10);
+    padding: .35rem .6rem;
+    color: #f3d36d;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.registration-panel-aside h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.registration-panel-aside p {
+    color: rgba(255, 255, 255, .78);
+}
+
+.registration-form-body {
+    padding: 2rem;
+}
+
+.form-section-title {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: .8rem;
+}
+
+.form-section-title span {
+    display: inline-flex;
+    color: var(--secondary);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.form-section-title h5 {
+    margin: .18rem 0 0;
+    color: var(--primary);
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+.form-section-title p {
+    margin: .25rem 0 0;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.registration-form-body .form-control,
+.registration-form-body .form-select {
+    min-height: 58px;
+    background-color: #f9fbfd;
+}
+
+.registration-form-body textarea.form-control {
+    min-height: 112px;
+}
+
+.registration-form-body .form-floating > label {
+    padding-top: 1rem;
+}
+
+.score-field .form-control {
+    text-align: center;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+}
+
 .table-container {
     border: 1px solid rgba(18, 63, 102, .08);
     border-radius: 8px;
@@ -1372,6 +1494,14 @@ button:focus-visible,
     .sidebar-container {
         position: static;
     }
+
+    .registration-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-panel-aside {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1395,6 +1525,24 @@ button:focus-visible,
 
     .card-body.p-5 {
         padding: 1.35rem !important;
+    }
+
+    .registration-hero {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .registration-form-body {
+        padding: 1.2rem;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
     }
 
     .profile-img-container {
